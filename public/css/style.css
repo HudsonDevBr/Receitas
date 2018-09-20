@@ -150,3 +150,8 @@ h6{
 .btn-direito {
     float: right;
 }
+.mais{
+    float: right;
+    padding: 50px;
+    font-size: 14px;
+}

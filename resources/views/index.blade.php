@@ -51,7 +51,7 @@
             <h2>Destaques</h2>
         </div>
         @foreach ($rec as $r)
-            @if ($r->foto != 'NULL.jpg' && $r->id < 10)
+            @if ($r->foto != 'NULL.jpg' && $r->id <= 8)
                 <div class="cards">
                     <h4 class="titulo-card"><a href="receita/{{ $r->id }}">{{ $r->nome }}</a></h4>
                     <div class="foto-card">
