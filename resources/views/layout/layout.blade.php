@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/receita/create">Enviar Receita</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </div>
     </nav>

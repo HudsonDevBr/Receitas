@@ -29,6 +29,7 @@
             </div>
             <textarea class="form-control" name="ingredientes" id="ingredientes"></textarea>
         </div>
+        <p class="aviso">*Separe os Itens por Virgula (,)</p>
         <br>
         <div class="input-group">
             <div class="input-group-prepend">
@@ -36,6 +37,7 @@
             </div>
             <textarea class="form-control" name="modoPreparo" id="modoPreparo"></textarea>
         </div>
+        <p class="aviso">*Separe cada parte da receita por (,)</p>
         <br>
         <div>
             <label for="categoria_id">Categorias</label>
@@ -44,6 +46,8 @@
                     <option value="{{$c->id}}">{{$c->id}} - {{$c->nome}}</option>
                 @endforeach
             </select>
+            <p class="aviso">*Selecione a categoria da receita.</p>
+
         </div>
         <div class="btn-direito btn-lg">
             <input type="submit" value="Enviar" class="btn btn-primary">

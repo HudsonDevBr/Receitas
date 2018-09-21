@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\receita;
 use App\Categoria;
 
+
 class receitaController extends Controller
 {
     /**
@@ -13,6 +14,13 @@ class receitaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth',['only' => ['create']]);
+    }
+
+
     public function index()
     {
         $receitas = receita::all();
