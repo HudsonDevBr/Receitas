@@ -46,19 +46,18 @@
                 </a>
         </div>
     </div>
+
     <div class="destaque">
         <div class="destaque-titulo">
             <h2>Destaques</h2>
         </div>
-        @foreach ($rec as $r)
-            @if ($r->foto != 'NULL.jpg' && $r->id <= 8)
-                <div class="cards">
-                    <h4 class="titulo-card"><a href="receita/{{ $r->id }}">{{ $r->nome }}</a></h4>
-                    <div class="foto-card">
-                        <img src="/storage/{{ $r->foto}}" width="280" height="180" alt="{{ $r->nome}}">
-                    </div>
+        @foreach ($destaques as $r)
+            <div class="cards">
+                <h4 class="titulo-card"><a href="receita/{{ $r->id }}">{{ $r->nome }}</a></h4>
+                <div class="foto-card">
+                    <img src="/storage/{{ $r->foto}}" width="280" height="180" alt="{{ $r->nome}}">
                 </div>
-            @endif
+            </div>
         @endforeach
     </div>
 
