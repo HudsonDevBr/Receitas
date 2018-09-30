@@ -10,15 +10,21 @@ class CategoriaController extends Controller
 {
 
     function index(){
-        $destaques = receita::orderby('id', 'desc' )->limit(6)->where('id' , '<' , 10)->where('foto', '<>' , 'NULL.jpg')->get();
+        $destaques = receita::destaque();
         $cat = Categoria::all();
-        $rec = receita::all();
-        return view('index' , compact('cat','rec','destaques'));
+        return view('index' , compact('cat','destaques'));
     }
 
     function show($id){
         $cat = Categoria::find($id);
 
         return view('show', compact('cat') );
+    }
+
+    function busca(Request $request){
+
+        $data = receita::busca($request->busca);
+
+        return view('busca' , compact('data', 'request'));
     }
 }

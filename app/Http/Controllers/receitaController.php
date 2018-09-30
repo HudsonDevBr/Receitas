@@ -59,8 +59,8 @@ class receitaController extends Controller
         $receita->modoPreparo = $request->input('modoPreparo');
         $receita->categoria_id = $request->input('categoria_id');
         $receita->foto = $path;
-
         $receita->save();
+
         return redirect('/');
     }
 
@@ -110,4 +110,5 @@ class receitaController extends Controller
     {
         //
     }
+
 }

@@ -12,26 +12,26 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><a href="/">Muito Gostoso</a></div>
+    <div class="logo"><a href="/"><img src="{{url('img/assets/logo.png')}}" alt="logo compartilhe receitas" width="130"></a></div>
         <div class="nav">
             <form action="{{url('/busca')}}" class="pesquisa" method="get">
-                <input type="text" class="fa form-control" placeholder=" &#xf002; Pesquisar" name="busca">
+                <input type="text" class="fa form-control" placeholder=" Pesquisar                  &#xf002;" name="busca">
             </form>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/receita/create">Enviar Receita</a></li>
-                <li><a href="/login">Login</a></li>
-                <li>
-                </li>
+                <li><a href="/login" ><i class="fa fa-user" aria-hidden="true" style="color: #fff"></i></a></li>
             </ul>
         </div>
     </nav>
+    <div class="cat">
+        <ul>
+            @foreach ($cat as $c)
+                <li><a href="categorias/{{ $c->id}}">{{ $c->nome}}</a></li>
+            @endforeach
+        </ul>
+    </div>
     <div class="container">
-        @yield('categorias')
         @yield('principal')
     </div>
-
-
     <script src="{{ asset('js/app.js')}}"></script>
 </body>
 </html>
