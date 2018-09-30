@@ -22,16 +22,24 @@
             </ul>
         </div>
     </nav>
-    <div class="cat">
-        <ul>
-            @foreach ($cat as $c)
-                <li><a href="categorias/{{ $c->id}}">{{ $c->nome}}</a></li>
-            @endforeach
-        </ul>
-    </div>
+
     <div class="container">
         @yield('principal')
     </div>
+    <footer>
+        <div class="footer ">
+            <div class="redes">
+                <div><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                <div><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                <div><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
+            </div>
+            <div class="logofooter">
+                <img src="{{url('img/assets/logo.png')}}" alt="logo compartilhe receitas" width="300" height="100">
+            </div>
+        </div>
+        <p class="copyright">Copyright 2018 Criado por HudsonDev.com.br Todos os direitos reservados proibido a reprodução sem autorização</p>
+    </footer>
     <script src="{{ asset('js/app.js')}}"></script>
 </body>
 </html>

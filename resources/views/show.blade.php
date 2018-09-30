@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.layoutnovo')
 
 @section('principal')
     <div class="categoria">
@@ -16,5 +16,6 @@
         </ul>
         <div class="btmvoltar"><a href="/">Voltar</a></div>
     </div>
+    <div class="espaco"></div>
 
 @endsection
