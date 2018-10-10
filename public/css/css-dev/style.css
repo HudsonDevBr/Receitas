@@ -1,0 +1,632 @@
+body{
+    font-size: 20px;
+    background-color: #e6e6e6;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #875252;
+}
+.logo{
+    font-size: 40px;
+    padding-left: 60px;
+}
+.logo a{
+    color: #000;
+    text-decoration: none;
+}
+.nav ul{
+    padding:13px;
+    margin:0px;
+    list-style:none;
+}
+
+.nav ul li{
+    display: inline;
+}
+.nav ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+}
+.nav ul li a:hover {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+}
+.btnenviar{
+    background-color: #fff;
+    border-radius: 3px;
+}
+.cat {
+    display: inline;
+    font-size: 9px;
+}
+.cat ul{
+    text-align: center;
+    margin: 0;
+}
+.cat ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.cat ul li a{
+    padding: 15px 15px;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+.cat ul li a:hover{
+    box-shadow: 2px 2px 2px #888888;
+}
+.banner{
+    width: 64%;
+}
+.imgBanner{
+    width: 100%;
+}
+.titulobanner{
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #000;
+}
+.descriaocbanner{
+    font-size: 17px;
+    text-shadow: 2px 2px 2px #000;
+}
+.destaque{
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    color: aliceblue;
+    padding: 0 1% 0 1%;
+    align-items: center;
+}
+.destaqueCategoria{
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    color: aliceblue;
+    padding: 0 1% 0 1%;
+    align-items: center;
+}
+.MaisVistos{
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: aliceblue;
+    padding: 0 1% 0 1%;
+}
+.MaisVistosCategoria{
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: aliceblue;
+    padding: 0 1% 0 1%;
+}
+.destaque-titulo{
+    background-color: #875252;
+    display: flex;
+    width: 100%;
+}
+.destaque-tituloCategoria{
+    background-color: #875252;
+    display: flex;
+    width: 100%;
+}
+.destaque-titulo h2{
+    margin: 10px auto;
+}
+.destaque-tituloCategoria h2{
+    margin: 10px auto;
+}
+.cards{
+    width: 100%;
+}
+.cards a:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+}
+.cards a{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1% 0;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.cards a:link{
+    text-decoration:none;
+}
+.cardsCategoria{
+    width: 100%;
+}
+.cardsCategoria a:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+}
+.cardsCategoria a{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1% 0;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.cardsCategoria a:link{
+    text-decoration:none;
+}
+.fotocard{
+    flex-grow: 5;
+}
+
+#busca{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.descricaocard{
+    color: #000;
+    font-size: 12px;
+    line-height: 1;
+    flex-grow: 100;
+    background-color: #fff;
+}
+.descricaocardCategoria{
+    color: #000;
+    font-size: 12px;
+    line-height: 1;
+    flex-grow: 100;
+    background-color: #fff;
+}
+.titulocard{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+}
+.tempocard{
+    line-height: 0.3;
+    text-align: center;
+}
+.rendcard{
+    line-height: 0.3;
+    text-align: center;
+}
+.catcard{
+    padding-top: 30px;
+    line-height: 0.3;
+    text-align: center;
+}
+.listatodasreceitas{
+    color: #000;
+}
+.listatodasreceitas:hover{
+    background-color: rgb(240, 240, 240);
+    color: rgb(22, 19, 19);
+    text-decoration: underline;
+}
+.categoria{
+    display: flex;
+    flex-direction: column;
+}
+.catDetalhe{
+    display: flex;
+    justify-content: space-around;
+}
+.categoriaDetalheTitulo{
+    display: block;
+}
+.categoria ul li{
+    list-style-type:none
+}
+.categoria ul li a{
+    color: #000;
+    text-decoration:none;
+    padding: 5px;
+}
+.categoria ul li a:hover{
+    background-color: rgb(228, 228, 228);
+}
+.btmvoltar{
+    float: right;
+}
+.btmvoltar a{
+    color: #fff;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    text-decoration:none;
+}
+.btmvoltar a:hover{
+    color: rgb(219, 217, 99);
+}
+.btn-direito {
+    float: right;
+}
+.mais{
+    float: right;
+    padding: 50px;
+    font-size: 14px;
+}
+.aviso{
+    font-size: 12px;
+    color: #875252;
+    padding: 10px 20px;
+}
+.pesquisa{
+    padding-top: 14px;
+}
+#busca{
+    text-transform: uppercase;
+    list-style: nome;
+}
+#receita{
+    text-transform: uppercase;
+}
+
+.maisvistos{
+    background-color: #875252;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    width:100%;
+}
+.maisvistostitulo{
+    text-align: center;
+    margin-bottom: auto;
+    line-height: 2;
+}
+.cardVerticais{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cardVerticais a{
+    background-color: #fff;
+    display: inline;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    width: 33.34%;
+    margin: 1%
+}
+.cardVerticais a:first-child {
+    margin-left: 0;
+}
+
+.cardVerticais a:last-child {
+    margin-right: 0;
+}
+.cardVerticais a:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+    text-decoration: none;
+}
+.nomeCardVertical{
+    padding: 10px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 26px;
+    font-weight: bold;
+    text-decoration:none;
+    color: #000;
+}
+.tempoCardVertical{
+    font-size: 12px;
+    line-height: 5px;
+    text-decoration:none;
+    color: #000;
+}
+.rendCardVertical{
+    font-size: 12px;
+    line-height: 5px;
+    text-decoration:none;
+    color: #000;
+}
+.fotoCardVertical img{
+    width: 100%;
+    height: 250px;
+}
+.catCardVertical {
+    font-size: 15px;
+    padding-top: 40px;
+    line-height: 15px;
+    text-decoration:none;
+    color: #000;
+    font-weight: bold;
+}
+footer{
+    background-color: #000;
+}
+footer p{
+    margin-bottom: 0;
+}
+.footer{
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 200px;
+}
+.redes{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.redes div{
+    padding: 15px;
+    font-size: 55px;
+}
+.logofooter{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+.fa-facebook{
+    color: rgb(22, 19, 211);
+}
+.fa-youtube-play{
+    color:red;
+}
+.fa-twitter{
+    color: rgb(0, 110, 255);
+}
+.fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.espaco{
+    padding-bottom: 31.8%;
+}
+.esquerda{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.direita{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 30px;
+}
+.receitas{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+.tituloReceita{
+    font-size: 35px;
+    font-weight: bold;
+}
+.categoriaReceita{
+    font-weight: bold;
+}
+.temposReceita{
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.tempoReceita{
+    width: 50%;
+}
+.rendReceita{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.ingredientesReceita h2{
+    background-color: #875252;
+    padding: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.ingredientesReceita p{
+    text-align: left;
+    padding-left: 45px;
+}
+.modoprepReceita h2{
+    background-color: #875252;
+    padding: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.modoprepReceita ol{
+    text-align: left;
+    padding-left: 45px;
+}
+.principal{
+    background-color: #fff;
+    padding: 0 60px 60px 60px;
+}
+.bt_menu{
+    color: #fff;
+    font-size: 33px;
+    display: none;
+}
+
+#bt_menu{
+    display: none;
+}
+#menu_mobile{
+    display: none;
+}
+@media (max-width: 1199px)
+{
+    .catcard{
+        padding-top: 5px;
+        line-height: 1;
+    }
+    .tempocard{
+        line-height: 1;
+    }
+    .rendcard{
+        line-height: 1;
+    }
+    .descricaocard{
+        font-size: 10px;
+    }
+    .titulocard{
+        padding: 10px 0;
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 26px;
+        font-weight: bold;
+        text-decoration:none;
+        color: #000;
+    }
+    .tempocard{
+        font-size: 12px;
+        line-height: 5px;
+        text-decoration:none;
+        color: #000;
+    }
+    .rendcard{
+        font-size: 12px;
+        line-height: 5px;
+        text-decoration:none;
+        color: #000;
+    }
+    .catcard {
+        font-size: 15px;
+        padding-top: 40px;
+        line-height: 15px;
+        text-decoration:none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .destaque{
+        width: 100%;
+        display: flex;
+    }
+    .catDetalhe{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .row{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+    }
+    .banner{
+        width: 100%;
+        align-items: center;
+    }
+    .cards{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .cards a{
+        background-color: #fff;
+        display: inline;
+        text-align: center;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        width: 33.34%;
+        margin: 1%;
+        justify-content: space-between;
+    }
+    .fotocard img{
+        width: 100%;
+        height: 100%;
+    }
+    .fotocardCategoria img{
+        width: 100%;
+        height: 250px;
+    }
+    .cards a:first-child {
+        margin-left: 0;
+    }
+
+    .cards a:last-child {
+        margin-right: 0;
+    }
+    .categoriasLinha{
+        margin-right:-5px;
+        margin-left:-6px
+    }
+    .cat{
+        font-size: 7px;
+    }
+    .destaqueCategoria{
+        width: 49%;
+        padding: 1%;
+    }
+    .MaisVistosCategoria{
+        width: 49%;
+        padding: 1%;
+    }
+    .cardsCategoria{
+        width: 100%;
+    }
+    .cardsCategoria a:hover{
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+    }
+    .cardsCategoria a{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 1% 0;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .cardsCategoria a:link{
+        text-decoration:none;
+    }
+}
+
+@media (max-width: 991px)
+{
+    nav{
+        padding: 0 50px;
+    }
+    .bt_menu{
+        display: block;
+    }
+    #menuGrande{
+        display: none;
+    }
+    #menu_mobile{
+        display: flex;
+        flex-direction: column;
+    }
+    .cat ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #cat ul li a{
+        font-weight: bold;
+    }
+    .cat ul li a:hover {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.0001);
+    }
+    #cat{
+        display: none;
+        justify-content: center;
+        font-size: 13px;
+    }
+    #bt_menu:checked ~ #cat{
+        display: flex;
+    }
+}

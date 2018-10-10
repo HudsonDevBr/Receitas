@@ -1,32 +1,35 @@
-@php
-    $array = explode(',', $receitas->ingredientes);
-@endphp
-@php
-    $array1 = explode(',', $receitas->modoPreparo);
-@endphp
-@extends('layout.layout')
+@extends('layout.layoutnovo')
 
 @section('principal')
-    <br><h1>{{ $receitas->nome}}</h1>
-    <h5>Tempo de Preparo {{ $receitas->tempoPreparo }} min - {{ $receitas->rendimento }} Porções</h5>
-    <img src="/storage/{{$receitas->foto}}" alt="imagem de {{ $receitas->nome}}" width="400" height="auto">
-    <br>
-
-    <div>
-        <h2>Ingredientes</h2>
-            @foreach (  $array as  $r)
-                <p>{{ $r }}.</p>
-            @endforeach
+<div class="receitas">
+    <div class="esquerda">
+        <h2 class="tituloReceita">{{ $receitas->nome}}</h2>
+        <h5 class="categoriaReceita">{{ $receitas->Categoria->nome}}</h5>
+        <img src="/storage/{{$receitas->foto}}" alt="imagem de {{ $receitas->nome}}" width="400" height="auto">
+        <div class="temposReceita">
+            <p class="tempoReceita">Tempo de Preparo {{ $receitas->tempoPreparo}} minutos </p>
+            <p class="rendReceita">Rendimento </br> {{ $receitas->rendimento }} Porções</p>
+        </div>
+        <p class="visualizações">{{ $receitas->visualizacoes}} visualizações</p>
+        <br>
     </div>
-    <div>
-            <h2>Modo de Preparo</h2>
-            @foreach (  $array1 as  $r)
+    <div class="direita">
+        <div class="ingredientesReceita">
+            <h2>Ingredientes</h2>
+            @foreach (  $Ingredientes as  $r)
                 <p>{{ $r }}</p>
             @endforeach
+        </div>
+        <div class="modoprepReceita">
+            <h2>Modo de Preparo</h2>
+            <ol>
+                @foreach (  $ModoPreparo as  $r)
+                <li>{{ $r }}</li>
+                @endforeach
+            </ol>
+        </div>
     </div>
-    <div class="mais">
-        <p>Ver mais Receitas de <a href="../categorias/{{ $receitas->categoria_id }}">{{ $receitas->categoria->nome}}</a></p>
-    </div>
-@endsection
+</div>
+    @endsection
 
 

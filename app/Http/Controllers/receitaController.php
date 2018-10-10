@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\receita;
 use App\Categoria;
+use Auth;
 
 
 class receitaController extends Controller
@@ -23,9 +24,10 @@ class receitaController extends Controller
 
     public function index()
     {
+        $categorias = Categoria::all();
         $receitas = receita::all();
 
-        return view('receitas.index' , compact('receitas'));
+        return view('receitas.index' , compact('receitas','categorias'));
     }
 
     /**
@@ -35,10 +37,8 @@ class receitaController extends Controller
      */
     public function create()
     {
-        $rec = receita::all();
-        $cat = Categoria::all();
-
-        return view('receitas.create' , compact('rec','cat'));
+        $categorias = Categoria::all();
+        return view('receitas.create' , compact('categorias'));
     }
 
     /**
@@ -49,6 +49,20 @@ class receitaController extends Controller
      */
     public function store(Request $request)
     {
+        $mensagens = [
+            'ingredientes.required' => 'Por favor digite os :attribute para enviar a receita',
+            'modoPreparo.required' => 'Por favor digite o Modo de Preparo para enviar a receita',
+            'required' => 'Por favor digite o :attribute para enviar a receita',
+            'max' => 'Digite :attribute válido',
+        ];
+        $request->validate([
+            'nome' => 'required|max:50',
+            'tempoPreparo' => 'required|max:3',
+            'rendimento' => 'required|max:3',
+            'ingredientes' => 'required',
+            'modoPreparo' => 'required'
+        ], $mensagens);
+
         $path = $request->file('foto')->store('imagens', 'public');
 
         $receita = new receita();
@@ -72,9 +86,28 @@ class receitaController extends Controller
      */
     public function show($id)
     {
+        //contador de Visitas
         $receitas = receita::find($id);
+        if(!Auth::check()){
+            $receitas->visualizacoes++;
+            $receitas->save();
 
-        return view('receitas.show', compact('receitas') );
+        }
+
+        $categorias = Categoria::all();
+        //tira as virgulas da variavel
+        $receitas1 = $result = str_replace(",", "", $receitas->ingredientes);
+        //coloca "<br />" em cada quebra de linha da variavel
+        $IngredientesLinha = nl2br($receitas1);
+        //transforma em array toda vez que existir um "<br />"
+        $Ingredientes = explode('<br />', $IngredientesLinha);
+        //coloca "<br />" em cada quebra de linha da variavel
+        $ModoPreparoLinha = nl2br( $receitas->modoPreparo);
+        //transforma em array toda vez que existir um "<br />"
+        $ModoPreparo = explode('<br />', $ModoPreparoLinha);
+
+
+        return view('receitas.show', compact('receitas','Ingredientes','ModoPreparo','categorias') );
     }
 
     /**
